@@ -1,7 +1,0 @@
-opencv-python
-pytesseract
-easyocr
-Pillow
-pyautogui
-numpy
-matplotlib
