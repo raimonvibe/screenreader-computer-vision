@@ -1,0 +1,9 @@
+# Minimal requirements (faster install, Tesseract only)
+# OpenCV 4.10.0.86+ required for Python 3.12 compatibility
+opencv-python>=4.10.0.86
+# NumPy with conservative upper bound for stability
+numpy>=1.21.0,<2.0
+Pillow>=8.0.0
+pytesseract>=0.3.10
+pyautogui>=0.9.50
+matplotlib>=3.5.0

@@ -1,0 +1,20 @@
+# Core computer vision and image processing
+# OpenCV 4.10.0.86+ required for Python 3.12 compatibility (setuptools fix)
+opencv-python>=4.10.0.86
+# NumPy <2.0 required for EasyOCR compatibility
+numpy>=1.21.0,<2.0
+Pillow>=8.0.0
+
+# OCR engines
+pytesseract>=0.3.10
+# EasyOCR dependencies (PyTorch ecosystem)
+torch>=1.13.0,<2.5.0
+torchvision>=0.14.0,<0.20.0
+# EasyOCR 1.7.2 with numpy<2 constraint
+easyocr>=1.7.0,<1.8.0
+
+# Screen capture and automation
+pyautogui>=0.9.50
+
+# Visualization and utilities
+matplotlib>=3.5.0
