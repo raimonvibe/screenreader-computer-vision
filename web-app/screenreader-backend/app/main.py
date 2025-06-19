@@ -20,7 +20,12 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-screen_reader = ScreenReader(use_easyocr=True, use_tesseract=True)
+try:
+    screen_reader = ScreenReader(use_easyocr=True, use_tesseract=True)
+    print("Initialized with both EasyOCR and Tesseract")
+except Exception as e:
+    print(f"Failed to initialize with Tesseract, falling back to EasyOCR only: {e}")
+    screen_reader = ScreenReader(use_easyocr=True, use_tesseract=False)
 
 class CaptureRequest(BaseModel):
     x: Optional[int] = None
