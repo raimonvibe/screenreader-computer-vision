@@ -2,7 +2,7 @@
 
 > 🚀 **A comprehensive computer vision solution for intelligent screen content analysis and text extraction**
 
-![Screenshot Placeholder](https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Screen+Reader+CV+Demo)
+![Screen Reader CV Interface](docs/images/ocr-capture-tab.png)
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Available-brightgreen)](https://screenreader-backend.onrender.com)
 [![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://python.org)
@@ -27,15 +27,51 @@ The Screen Reading Computer Vision Model is a sophisticated multi-component syst
 - **Bounding Box Detection**: Precise text location mapping
 
 ### 🌐 Web Application
-- **Modern React UI**: Responsive interface with dark/light mode
-- **Live Configuration**: Real-time OCR engine switching
-- **Visual Results**: Interactive bounding box visualization
-- **API Integration**: Seamless backend communication
+- **Modern React UI**: Responsive interface with dark/light mode and tab-based navigation
+- **Live Configuration**: Real-time OCR engine switching and advanced settings
+- **Visual Results**: Interactive bounding box visualization with confidence metrics
+- **Analytics Dashboard**: Usage tracking, performance insights, and historical data
+- **History Management**: Persistent storage with search, filtering, and export capabilities
+- **API Integration**: Seamless backend communication with enhanced error handling
 
 ### 🚀 Deployment Ready
 - **Docker Support**: Containerized deployment
 - **Cloud Ready**: Render.com configuration included
 - **Cross-Platform**: Linux, macOS, and Windows support
+
+## 🎨 Enhanced Frontend Features
+
+### 📊 Analytics Dashboard
+- **Usage Statistics**: Track total processed items, average processing time, and confidence metrics
+- **Visual Charts**: Daily activity trends, engine usage distribution, and processing time analysis
+- **Performance Insights**: Weekly and monthly summaries with detailed breakdowns
+- **Real-time Updates**: Analytics automatically update as OCR operations are performed
+
+![Analytics Dashboard](docs/images/analytics-panel.png)
+
+### 📝 History Tracking
+- **Complete OCR History**: Persistent storage of all OCR operations with metadata
+- **Advanced Search**: Filter history by text content, source type, and confidence level
+- **Export Functionality**: Download history as JSON for backup or analysis
+- **Detailed View**: View full OCR results including bounding boxes and processing details
+
+![History Dashboard](docs/images/history-dashboard.png)
+
+### ⚙️ Enhanced Settings
+- **OCR Configuration**: Default engine selection and language settings
+- **Image Preprocessing**: Adjustable contrast, brightness, and noise reduction
+- **Keyboard Shortcuts**: Configurable hotkeys for common actions (Ctrl+S for capture, Ctrl+U for upload)
+- **Data Management**: Export/import settings with reset to defaults option
+
+![Enhanced Settings](docs/images/enhanced-settings.png)
+
+### 🎯 Tab-based Navigation
+- **Clean Interface**: Organized sections for OCR Capture, History & Analytics, and Settings
+- **Preserved Functionality**: All existing OCR capabilities maintained and enhanced
+- **Dark Mode Support**: Consistent theming across all new components
+- **Responsive Design**: Mobile-friendly layouts using Tailwind CSS
+
+![OCR Capture Interface](docs/images/ocr-capture-tab.png)
 
 ## 🏗️ Architecture
 
