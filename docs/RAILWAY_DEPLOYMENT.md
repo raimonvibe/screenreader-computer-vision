@@ -71,12 +71,12 @@ Deploy each service separately:
 
 ### Root Configuration (`railway.toml`)
 - Configured for backend deployment with nixpacksPlan structure
-- System dependencies: tesseract-ocr, scrot, xvfb-run for OCR functionality
+- System dependencies: tesseract-ocr, scrot, xvfb for OCR functionality
 - Uses Railway's current configuration format with nixpacksPlan field
 
 ### Backend Configuration (`web-app/screenreader-backend/railway.toml`)
 - Python 3.12 runtime
-- System dependencies: tesseract-ocr, scrot, xvfb-run
+- System dependencies: tesseract-ocr, scrot, xvfb
 - FastAPI with uvicorn server
 - Port configuration via $PORT environment variable
 - Uses nixpacksPlan field for system package configuration
@@ -129,7 +129,7 @@ npm run preview
 The backend service requires the following system packages for OCR functionality:
 - `tesseract-ocr`: OCR engine
 - `scrot`: Screen capture utility
-- `xvfb-run`: Virtual display for headless operation
+- `xvfb`: Virtual display for headless operation (provides xvfb-run command)
 
 These are automatically installed via the `aptPkgs` configuration in the Railway TOML files.
 
