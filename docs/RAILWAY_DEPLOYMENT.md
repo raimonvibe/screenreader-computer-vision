@@ -22,17 +22,32 @@ Deploy both services from the root repository using the main `railway.toml` conf
    # Login to Railway
    railway login
    
-   # Initialize project
+   # Initialize project from root directory
    railway init
    ```
 
-2. **Deploy Services**
+2. **Deploy Backend Service**
    ```bash
-   # Deploy both services
+   # Deploy backend from root directory
+   railway up
+   
+   # OR deploy from backend directory
+   cd web-app/screenreader-backend
    railway up
    ```
 
-The root `railway.toml` will automatically deploy both frontend and backend services.
+3. **Deploy Frontend Service (Optional)**
+   ```bash
+   # Deploy frontend from frontend directory
+   cd web-app/screenreader-frontend
+   railway up
+   ```
+
+**Note**: The root directory is configured for backend deployment. For frontend deployment, use the frontend directory.
+
+## Configuration Structure
+
+Railway uses the `nixpacksPlan` field within `railway.toml` files to configure system dependencies and build processes. The configuration structure follows Railway's current documentation format.
 
 ### Option 2: Individual Service Deployment
 
@@ -55,19 +70,20 @@ Deploy each service separately:
 ## Configuration Files
 
 ### Root Configuration (`railway.toml`)
-- Defines both frontend and backend services
-- Configures service dependencies
-- Sets up environment variables for service communication
+- Configured for backend deployment with nixpacksPlan structure
+- System dependencies: tesseract-ocr, scrot, xvfb-run for OCR functionality
+- Uses Railway's current configuration format with nixpacksPlan field
 
 ### Backend Configuration (`web-app/screenreader-backend/railway.toml`)
 - Python 3.12 runtime
 - System dependencies: tesseract-ocr, scrot, xvfb-run
 - FastAPI with uvicorn server
 - Port configuration via $PORT environment variable
+- Uses nixpacksPlan field for system package configuration
 
 ### Frontend Configuration (`web-app/screenreader-frontend/railway.toml`)
 - Node.js 18 runtime
-- Vite build process
+- Vite build process via nixpacksPlan install phase
 - Preview server for production
 - API URL configuration via environment variables
 
@@ -121,17 +137,28 @@ These are automatically installed via the `aptPkgs` configuration in the Railway
 
 ### Common Issues
 
-1. **OCR Dependencies Not Found**
-   - Ensure `aptPkgs` are correctly specified in railway.toml
-   - Check Railway build logs for package installation errors
+1. **"No start command could be found" Error**
+   - Ensure `startCommand` is properly defined in the `[deploy]` section
+   - Verify railway.toml uses the correct nixpacksPlan structure
+   - Remove any conflicting nixpacks.toml files (Railway expects configuration in railway.toml)
 
-2. **Frontend API Connection Issues**
+2. **OCR Dependencies Not Found**
+   - Ensure `aptPkgs` are correctly specified in nixpacksPlan phases.setup
+   - Check Railway build logs for package installation errors
+   - Verify nixpacksPlan structure follows Railway's current format
+
+3. **Frontend API Connection Issues**
    - Verify `VITE_API_URL` environment variable is set
    - Check that backend service is running and accessible
 
-3. **Port Configuration**
+4. **Port Configuration**
    - Railway automatically provides the `$PORT` environment variable
    - Ensure both services use `$PORT` in their start commands
+
+5. **Configuration File Conflicts**
+   - Remove any separate nixpacks.toml files
+   - Use only railway.toml with embedded nixpacksPlan configuration
+   - Ensure builder is set to "NIXPACKS" (uppercase)
 
 ### Build Logs
 ```bash
