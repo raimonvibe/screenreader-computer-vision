@@ -379,6 +379,52 @@ class ScreenReader:
         """
         return self.read_screen(region=(x, y, width, height))
     
+    def process_uploaded_image(self, image: np.ndarray) -> Dict:
+        """
+        Process an uploaded image through the OCR pipeline.
+        
+        Args:
+            image: Uploaded image as numpy array
+            
+        Returns:
+            Dictionary with extracted text and metadata
+        """
+        print("Processing uploaded image...")
+        start_time = time.time()
+        
+        processed_image = self.preprocess_image(image)
+        
+        results = []
+        
+        if self.use_tesseract:
+            print("Extracting text with Tesseract...")
+            tesseract_result = self.extract_text_tesseract(processed_image)
+            results.append(tesseract_result)
+        
+        if self.use_easyocr:
+            print("Extracting text with EasyOCR...")
+            easyocr_result = self.extract_text_easyocr(image)
+            results.append(easyocr_result)
+        
+        if len(results) == 2:
+            final_result = self.combine_results(results[0], results[1])
+        elif len(results) == 1:
+            final_result = results[0]
+        else:
+            final_result = {"text": "", "confidence": 0, "bounding_boxes": []}
+        
+        processing_time = time.time() - start_time
+        final_result.update({
+            "processing_time": processing_time,
+            "image_shape": image.shape,
+            "region": None,
+            "timestamp": time.time(),
+            "source": "uploaded_image"
+        })
+        
+        print(f"Image processing completed in {processing_time:.2f} seconds")
+        return final_result
+
     def save_debug_image(self, image: np.ndarray, filename: str = "debug_capture.png"):
         """
         Save captured image for debugging purposes.

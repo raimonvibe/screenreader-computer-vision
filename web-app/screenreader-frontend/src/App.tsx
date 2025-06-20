@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Settings, Monitor, Square, Loader2, Eye } from 'lucide-react';
+import { Settings, Monitor, Square, Loader2, Eye, Upload } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
@@ -36,6 +36,7 @@ function App() {
   const [regionMode, setRegionMode] = useState(false);
   const [region, setRegion] = useState({ x: 0, y: 0, width: 800, height: 600 });
   const [showBoundingBoxes, setShowBoundingBoxes] = useState(true);
+  const [isUploading, setIsUploading] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
@@ -72,6 +73,36 @@ function App() {
       console.error('Capture failed:', error);
     } finally {
       setIsCapturing(false);
+    }
+  };
+
+  const uploadImage = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    setIsUploading(true);
+    try {
+      await updateConfig();
+      
+      const formData = new FormData();
+      formData.append('file', file);
+      
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/upload/image`, {
+        method: 'POST',
+        body: formData
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Upload failed: ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      setResult(data);
+    } catch (error) {
+      console.error('Upload failed:', error);
+    } finally {
+      setIsUploading(false);
+      event.target.value = '';
     }
   };
 
@@ -188,24 +219,63 @@ function App() {
         {/* Capture Controls */}
         <Card className="dark:bg-gray-800 dark:border-gray-700">
           <CardContent className="pt-6">
-            <div className="flex items-center justify-center space-x-4">
-              <Button
-                onClick={captureScreen}
-                disabled={isCapturing || (!useTesseract && !useEasyOCR)}
-                size="lg"
-                className="flex items-center space-x-2"
-              >
-                {isCapturing ? (
-                  <Loader2 className="h-5 w-5 animate-spin" />
-                ) : regionMode ? (
-                  <Square className="h-5 w-5" />
-                ) : (
-                  <Monitor className="h-5 w-5" />
-                )}
-                <span>
-                  {isCapturing ? 'Capturing...' : regionMode ? 'Capture Region' : 'Capture Screen'}
-                </span>
-              </Button>
+            <div className="flex flex-col items-center space-y-4">
+              <div className="flex items-center justify-center space-x-4">
+                <Button
+                  onClick={captureScreen}
+                  disabled={isCapturing || isUploading || (!useTesseract && !useEasyOCR)}
+                  size="lg"
+                  className="flex items-center space-x-2"
+                >
+                  {isCapturing ? (
+                    <Loader2 className="h-5 w-5 animate-spin" />
+                  ) : regionMode ? (
+                    <Square className="h-5 w-5" />
+                  ) : (
+                    <Monitor className="h-5 w-5" />
+                  )}
+                  <span>
+                    {isCapturing ? 'Capturing...' : regionMode ? 'Capture Region' : 'Capture Screen'}
+                  </span>
+                </Button>
+              </div>
+              
+              <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+                <div className="h-px bg-gray-300 dark:bg-gray-600 flex-1"></div>
+                <span>or</span>
+                <div className="h-px bg-gray-300 dark:bg-gray-600 flex-1"></div>
+              </div>
+              
+              <div className="flex items-center justify-center">
+                <label htmlFor="image-upload" className="cursor-pointer">
+                  <Button
+                    asChild
+                    disabled={isCapturing || isUploading || (!useTesseract && !useEasyOCR)}
+                    size="lg"
+                    variant="outline"
+                    className="flex items-center space-x-2"
+                  >
+                    <span>
+                      {isUploading ? (
+                        <Loader2 className="h-5 w-5 animate-spin" />
+                      ) : (
+                        <Upload className="h-5 w-5" />
+                      )}
+                      <span>
+                        {isUploading ? 'Processing...' : 'Upload Image'}
+                      </span>
+                    </span>
+                  </Button>
+                </label>
+                <input
+                  id="image-upload"
+                  type="file"
+                  accept="image/*"
+                  onChange={uploadImage}
+                  className="hidden"
+                  disabled={isCapturing || isUploading || (!useTesseract && !useEasyOCR)}
+                />
+              </div>
             </div>
           </CardContent>
         </Card>
