@@ -36,7 +36,7 @@ The Screen Reading Computer Vision Model is a sophisticated multi-component syst
 
 ### 🚀 Deployment Ready
 - **Docker Support**: Containerized deployment
-- **Cloud Ready**: Render.com configuration included
+- **Cloud Ready**: Render.com and Railway configuration included
 - **Cross-Platform**: Linux, macOS, and Windows support
 
 ## 🎨 Enhanced Frontend Features
@@ -72,6 +72,37 @@ The Screen Reading Computer Vision Model is a sophisticated multi-component syst
 - **Responsive Design**: Mobile-friendly layouts using Tailwind CSS
 
 ![OCR Capture Interface](docs/images/ocr-capture-tab.png)
+
+## 🚀 Railway Deployment
+
+Deploy to Railway with one command:
+
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Login and deploy
+railway login
+railway init
+railway up
+```
+
+See [Railway Deployment Guide](docs/RAILWAY_DEPLOYMENT.md) for detailed instructions.
+
+### Quick Deploy Options
+
+**Option 1: Monorepo (Recommended)**
+- Deploy both frontend and backend from root directory
+- Automatic service linking and environment configuration
+- Uses root `railway.toml` configuration
+
+**Option 2: Individual Services**
+- Deploy backend: `cd web-app/screenreader-backend && railway up`
+- Deploy frontend: `cd web-app/screenreader-frontend && railway up`
+
+### Environment Variables
+- **Backend**: `PORT`, `PYTHON_VERSION` (3.12)
+- **Frontend**: `PORT`, `NODE_VERSION` (18), `VITE_API_URL`
 
 ## 🏗️ Architecture
 
