@@ -1,26 +1,9 @@
-[services.backend]
-source = "web-app/screenreader-backend"
-builder = "nixpacks"
+[build]
+builder = "NIXPACKS"
+nixpacksPlan = { phases = { setup = { aptPkgs = ["tesseract-ocr", "scrot", "xvfb-run"] } } }
 
-[services.backend.build.nixpacksConfig]
-aptPkgs = ["tesseract-ocr", "scrot", "xvfb-run"]
-
-[services.backend.deploy]
+[deploy]
 startCommand = "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
 
-[services.backend.env]
+[env]
 PYTHON_VERSION = "3.12"
-
-[services.frontend]
-source = "web-app/screenreader-frontend"
-builder = "nixpacks"
-
-[services.frontend.build.nixpacksConfig]
-buildCommand = "npm run build"
-
-[services.frontend.deploy]
-startCommand = "npm run preview"
-
-[services.frontend.env]
-NODE_VERSION = "18"
-VITE_API_URL = "${{backend.RAILWAY_PUBLIC_DOMAIN}}"

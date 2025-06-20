@@ -1,8 +1,6 @@
 [build]
-builder = "nixpacks"
-
-[build.nixpacksConfig]
-buildCommand = "npm run build"
+builder = "NIXPACKS"
+nixpacksPlan = { phases = { install = { cmds = ["npm run build"] } } }
 
 [deploy]
 startCommand = "npm run preview"
