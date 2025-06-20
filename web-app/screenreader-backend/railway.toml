@@ -1,8 +1,6 @@
 [build]
-builder = "nixpacks"
-
-[build.nixpacksConfig]
-aptPkgs = ["tesseract-ocr", "scrot", "xvfb-run"]
+builder = "NIXPACKS"
+nixpacksPlan = { phases = { setup = { aptPkgs = ["tesseract-ocr", "scrot", "xvfb-run"] } } }
 
 [deploy]
 startCommand = "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
