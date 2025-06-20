@@ -1,0 +1,927 @@
+{
+  "full_screen": {
+    "text": "Screen Reading Computer Vision Model This is a test image for OCR testing The quick brown fox jumps over the lozy dog 1234567880 Testing different font sizes and styles",
+    "confidence": 94.37931034482759,
+    "bounding_boxes": [
+      {
+        "x": 24,
+        "y": 25,
+        "width": 121,
+        "height": 28,
+        "text": "Screen",
+        "confidence": 96
+      },
+      {
+        "x": 171,
+        "y": 24,
+        "width": 141,
+        "height": 37,
+        "text": "Reading",
+        "confidence": 96
+      },
+      {
+        "x": 337,
+        "y": 25,
+        "width": 179,
+        "height": 36,
+        "text": "Computer",
+        "confidence": 96
+      },
+      {
+        "x": 535,
+        "y": 24,
+        "width": 104,
+        "height": 29,
+        "text": "Vision",
+        "confidence": 96
+      },
+      {
+        "x": 664,
+        "y": 25,
+        "width": 99,
+        "height": 28,
+        "text": "Model",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 82,
+        "width": 48,
+        "height": 21,
+        "text": "This",
+        "confidence": 96
+      },
+      {
+        "x": 116,
+        "y": 89,
+        "width": 13,
+        "height": 14,
+        "text": "a",
+        "confidence": 96
+      },
+      {
+        "x": 143,
+        "y": 83,
+        "width": 47,
+        "height": 20,
+        "text": "test",
+        "confidence": 96
+      },
+      {
+        "x": 204,
+        "y": 82,
+        "width": 73,
+        "height": 27,
+        "text": "image",
+        "confidence": 96
+      },
+      {
+        "x": 340,
+        "y": 83,
+        "width": 49,
+        "height": 20,
+        "text": "OCR",
+        "confidence": 96
+      },
+      {
+        "x": 403,
+        "y": 82,
+        "width": 82,
+        "height": 27,
+        "text": "testing",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 137,
+        "width": 32,
+        "height": 16,
+        "text": "The",
+        "confidence": 96
+      },
+      {
+        "x": 63,
+        "y": 137,
+        "width": 49,
+        "height": 20,
+        "text": "quick",
+        "confidence": 96
+      },
+      {
+        "x": 187,
+        "y": 137,
+        "width": 27,
+        "height": 16,
+        "text": "fox",
+        "confidence": 96
+      },
+      {
+        "x": 223,
+        "y": 137,
+        "width": 58,
+        "height": 20,
+        "text": "jumps",
+        "confidence": 96
+      },
+      {
+        "x": 425,
+        "y": 137,
+        "width": 33,
+        "height": 20,
+        "text": "dog",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 235,
+        "width": 75,
+        "height": 23,
+        "text": "Testing",
+        "confidence": 96
+      },
+      {
+        "x": 110,
+        "y": 235,
+        "width": 91,
+        "height": 18,
+        "text": "different",
+        "confidence": 96
+      },
+      {
+        "x": 213,
+        "y": 235,
+        "width": 42,
+        "height": 18,
+        "text": "font",
+        "confidence": 96
+      },
+      {
+        "x": 267,
+        "y": 235,
+        "width": 53,
+        "height": 18,
+        "text": "sizes",
+        "confidence": 96
+      },
+      {
+        "x": 332,
+        "y": 235,
+        "width": 38,
+        "height": 18,
+        "text": "and",
+        "confidence": 96
+      },
+      {
+        "x": 383,
+        "y": 235,
+        "width": 61,
+        "height": 23,
+        "text": "styles",
+        "confidence": 96
+      },
+      {
+        "x": 83,
+        "y": 82,
+        "width": 18,
+        "height": 21,
+        "text": "is",
+        "confidence": 95
+      },
+      {
+        "x": 291,
+        "y": 83,
+        "width": 36,
+        "height": 20,
+        "text": "for",
+        "confidence": 95
+      },
+      {
+        "x": 291,
+        "y": 142,
+        "width": 40,
+        "height": 11,
+        "text": "over",
+        "confidence": 95
+      },
+      {
+        "x": 341,
+        "y": 137,
+        "width": 28,
+        "height": 16,
+        "text": "the",
+        "confidence": 89
+      },
+      {
+        "x": 380,
+        "y": 137,
+        "width": 35,
+        "height": 20,
+        "text": "lozy",
+        "confidence": 89
+      },
+      {
+        "x": 122,
+        "y": 137,
+        "width": 53,
+        "height": 16,
+        "text": "brown",
+        "confidence": 83
+      },
+      {
+        "x": 23,
+        "y": 190,
+        "width": 99,
+        "height": 13,
+        "text": "1234567880",
+        "confidence": 79
+      },
+      {
+        "x": 657,
+        "y": 17,
+        "width": 112,
+        "height": 42,
+        "text": "Model",
+        "confidence": 0.9999596427085246
+      },
+      {
+        "x": 417,
+        "y": 129,
+        "width": 44,
+        "height": 32,
+        "text": "dog",
+        "confidence": 0.9996210563327818
+      },
+      {
+        "x": 18,
+        "y": 76,
+        "width": 86,
+        "height": 32,
+        "text": "This is",
+        "confidence": 0.9918687127870778
+      },
+      {
+        "x": 13,
+        "y": 7,
+        "width": 633,
+        "height": 63,
+        "text": "Screen Reading Computer Vision",
+        "confidence": 0.9879731069064128
+      },
+      {
+        "x": 15,
+        "y": 225,
+        "width": 432,
+        "height": 38,
+        "text": "Testing different font sizes and styles",
+        "confidence": 0.964753287441315
+      },
+      {
+        "x": 113,
+        "y": 76,
+        "width": 378,
+        "height": 39,
+        "text": "a test image for OCR testing",
+        "confidence": 0.8664323580568165
+      },
+      {
+        "x": 18,
+        "y": 132,
+        "width": 401,
+        "height": 29,
+        "text": "The quick brown fox jumps over the lazy",
+        "confidence": 0.6849022054872707
+      }
+    ],
+    "primary_engine": "tesseract",
+    "secondary_engine": "easyocr",
+    "combined": true,
+    "processing_time": 1.059912919998169,
+    "image_shape": [
+      400,
+      800,
+      3
+    ],
+    "region": null,
+    "timestamp": 1750397422.4554868
+  },
+  "region_reading": {
+    "text": "Screen Reading Computer Vision Model This is a test image for OCR testing The quick brown fox jumps over the lozy dog 1234567880 Testing different font sizes and styles",
+    "confidence": 94.37931034482759,
+    "bounding_boxes": [
+      {
+        "x": 24,
+        "y": 25,
+        "width": 121,
+        "height": 28,
+        "text": "Screen",
+        "confidence": 96
+      },
+      {
+        "x": 171,
+        "y": 24,
+        "width": 141,
+        "height": 37,
+        "text": "Reading",
+        "confidence": 96
+      },
+      {
+        "x": 337,
+        "y": 25,
+        "width": 179,
+        "height": 36,
+        "text": "Computer",
+        "confidence": 96
+      },
+      {
+        "x": 535,
+        "y": 24,
+        "width": 104,
+        "height": 29,
+        "text": "Vision",
+        "confidence": 96
+      },
+      {
+        "x": 664,
+        "y": 25,
+        "width": 99,
+        "height": 28,
+        "text": "Model",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 82,
+        "width": 48,
+        "height": 21,
+        "text": "This",
+        "confidence": 96
+      },
+      {
+        "x": 116,
+        "y": 89,
+        "width": 13,
+        "height": 14,
+        "text": "a",
+        "confidence": 96
+      },
+      {
+        "x": 143,
+        "y": 83,
+        "width": 47,
+        "height": 20,
+        "text": "test",
+        "confidence": 96
+      },
+      {
+        "x": 204,
+        "y": 82,
+        "width": 73,
+        "height": 27,
+        "text": "image",
+        "confidence": 96
+      },
+      {
+        "x": 340,
+        "y": 83,
+        "width": 49,
+        "height": 20,
+        "text": "OCR",
+        "confidence": 96
+      },
+      {
+        "x": 403,
+        "y": 82,
+        "width": 82,
+        "height": 27,
+        "text": "testing",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 137,
+        "width": 32,
+        "height": 16,
+        "text": "The",
+        "confidence": 96
+      },
+      {
+        "x": 63,
+        "y": 137,
+        "width": 49,
+        "height": 20,
+        "text": "quick",
+        "confidence": 96
+      },
+      {
+        "x": 187,
+        "y": 137,
+        "width": 27,
+        "height": 16,
+        "text": "fox",
+        "confidence": 96
+      },
+      {
+        "x": 223,
+        "y": 137,
+        "width": 58,
+        "height": 20,
+        "text": "jumps",
+        "confidence": 96
+      },
+      {
+        "x": 425,
+        "y": 137,
+        "width": 33,
+        "height": 20,
+        "text": "dog",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 235,
+        "width": 75,
+        "height": 23,
+        "text": "Testing",
+        "confidence": 96
+      },
+      {
+        "x": 110,
+        "y": 235,
+        "width": 91,
+        "height": 18,
+        "text": "different",
+        "confidence": 96
+      },
+      {
+        "x": 213,
+        "y": 235,
+        "width": 42,
+        "height": 18,
+        "text": "font",
+        "confidence": 96
+      },
+      {
+        "x": 267,
+        "y": 235,
+        "width": 53,
+        "height": 18,
+        "text": "sizes",
+        "confidence": 96
+      },
+      {
+        "x": 332,
+        "y": 235,
+        "width": 38,
+        "height": 18,
+        "text": "and",
+        "confidence": 96
+      },
+      {
+        "x": 383,
+        "y": 235,
+        "width": 61,
+        "height": 23,
+        "text": "styles",
+        "confidence": 96
+      },
+      {
+        "x": 83,
+        "y": 82,
+        "width": 18,
+        "height": 21,
+        "text": "is",
+        "confidence": 95
+      },
+      {
+        "x": 291,
+        "y": 83,
+        "width": 36,
+        "height": 20,
+        "text": "for",
+        "confidence": 95
+      },
+      {
+        "x": 291,
+        "y": 142,
+        "width": 40,
+        "height": 11,
+        "text": "over",
+        "confidence": 95
+      },
+      {
+        "x": 341,
+        "y": 137,
+        "width": 28,
+        "height": 16,
+        "text": "the",
+        "confidence": 89
+      },
+      {
+        "x": 380,
+        "y": 137,
+        "width": 35,
+        "height": 20,
+        "text": "lozy",
+        "confidence": 89
+      },
+      {
+        "x": 122,
+        "y": 137,
+        "width": 53,
+        "height": 16,
+        "text": "brown",
+        "confidence": 83
+      },
+      {
+        "x": 23,
+        "y": 190,
+        "width": 99,
+        "height": 13,
+        "text": "1234567880",
+        "confidence": 79
+      },
+      {
+        "x": 657,
+        "y": 17,
+        "width": 112,
+        "height": 42,
+        "text": "Model",
+        "confidence": 0.9999596427085246
+      },
+      {
+        "x": 417,
+        "y": 129,
+        "width": 44,
+        "height": 32,
+        "text": "dog",
+        "confidence": 0.9996210563327818
+      },
+      {
+        "x": 18,
+        "y": 76,
+        "width": 86,
+        "height": 32,
+        "text": "This is",
+        "confidence": 0.9918687127870778
+      },
+      {
+        "x": 13,
+        "y": 7,
+        "width": 633,
+        "height": 63,
+        "text": "Screen Reading Computer Vision",
+        "confidence": 0.9879731069064128
+      },
+      {
+        "x": 15,
+        "y": 225,
+        "width": 432,
+        "height": 38,
+        "text": "Testing different font sizes and styles",
+        "confidence": 0.964753287441315
+      },
+      {
+        "x": 113,
+        "y": 76,
+        "width": 378,
+        "height": 39,
+        "text": "a test image for OCR testing",
+        "confidence": 0.8664323580568165
+      },
+      {
+        "x": 18,
+        "y": 132,
+        "width": 401,
+        "height": 29,
+        "text": "The quick brown fox jumps over the lazy",
+        "confidence": 0.6849022054872707
+      }
+    ],
+    "primary_engine": "tesseract",
+    "secondary_engine": "easyocr",
+    "combined": true,
+    "processing_time": 1.1276733875274658,
+    "image_shape": [
+      400,
+      800,
+      3
+    ],
+    "region": [
+      0,
+      0,
+      600,
+      400
+    ],
+    "timestamp": 1750397425.4529798
+  },
+  "bounding_boxes": {
+    "text": "Screen Reading Computer Vision Model This is a test image for OCR testing The quick brown fox jumps over the lozy dog 1234567880 Testing different font sizes and styles",
+    "confidence": 94.37931034482759,
+    "bounding_boxes": [
+      {
+        "x": 24,
+        "y": 25,
+        "width": 121,
+        "height": 28,
+        "text": "Screen",
+        "confidence": 96
+      },
+      {
+        "x": 171,
+        "y": 24,
+        "width": 141,
+        "height": 37,
+        "text": "Reading",
+        "confidence": 96
+      },
+      {
+        "x": 337,
+        "y": 25,
+        "width": 179,
+        "height": 36,
+        "text": "Computer",
+        "confidence": 96
+      },
+      {
+        "x": 535,
+        "y": 24,
+        "width": 104,
+        "height": 29,
+        "text": "Vision",
+        "confidence": 96
+      },
+      {
+        "x": 664,
+        "y": 25,
+        "width": 99,
+        "height": 28,
+        "text": "Model",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 82,
+        "width": 48,
+        "height": 21,
+        "text": "This",
+        "confidence": 96
+      },
+      {
+        "x": 116,
+        "y": 89,
+        "width": 13,
+        "height": 14,
+        "text": "a",
+        "confidence": 96
+      },
+      {
+        "x": 143,
+        "y": 83,
+        "width": 47,
+        "height": 20,
+        "text": "test",
+        "confidence": 96
+      },
+      {
+        "x": 204,
+        "y": 82,
+        "width": 73,
+        "height": 27,
+        "text": "image",
+        "confidence": 96
+      },
+      {
+        "x": 340,
+        "y": 83,
+        "width": 49,
+        "height": 20,
+        "text": "OCR",
+        "confidence": 96
+      },
+      {
+        "x": 403,
+        "y": 82,
+        "width": 82,
+        "height": 27,
+        "text": "testing",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 137,
+        "width": 32,
+        "height": 16,
+        "text": "The",
+        "confidence": 96
+      },
+      {
+        "x": 63,
+        "y": 137,
+        "width": 49,
+        "height": 20,
+        "text": "quick",
+        "confidence": 96
+      },
+      {
+        "x": 187,
+        "y": 137,
+        "width": 27,
+        "height": 16,
+        "text": "fox",
+        "confidence": 96
+      },
+      {
+        "x": 223,
+        "y": 137,
+        "width": 58,
+        "height": 20,
+        "text": "jumps",
+        "confidence": 96
+      },
+      {
+        "x": 425,
+        "y": 137,
+        "width": 33,
+        "height": 20,
+        "text": "dog",
+        "confidence": 96
+      },
+      {
+        "x": 21,
+        "y": 235,
+        "width": 75,
+        "height": 23,
+        "text": "Testing",
+        "confidence": 96
+      },
+      {
+        "x": 110,
+        "y": 235,
+        "width": 91,
+        "height": 18,
+        "text": "different",
+        "confidence": 96
+      },
+      {
+        "x": 213,
+        "y": 235,
+        "width": 42,
+        "height": 18,
+        "text": "font",
+        "confidence": 96
+      },
+      {
+        "x": 267,
+        "y": 235,
+        "width": 53,
+        "height": 18,
+        "text": "sizes",
+        "confidence": 96
+      },
+      {
+        "x": 332,
+        "y": 235,
+        "width": 38,
+        "height": 18,
+        "text": "and",
+        "confidence": 96
+      },
+      {
+        "x": 383,
+        "y": 235,
+        "width": 61,
+        "height": 23,
+        "text": "styles",
+        "confidence": 96
+      },
+      {
+        "x": 83,
+        "y": 82,
+        "width": 18,
+        "height": 21,
+        "text": "is",
+        "confidence": 95
+      },
+      {
+        "x": 291,
+        "y": 83,
+        "width": 36,
+        "height": 20,
+        "text": "for",
+        "confidence": 95
+      },
+      {
+        "x": 291,
+        "y": 142,
+        "width": 40,
+        "height": 11,
+        "text": "over",
+        "confidence": 95
+      },
+      {
+        "x": 341,
+        "y": 137,
+        "width": 28,
+        "height": 16,
+        "text": "the",
+        "confidence": 89
+      },
+      {
+        "x": 380,
+        "y": 137,
+        "width": 35,
+        "height": 20,
+        "text": "lozy",
+        "confidence": 89
+      },
+      {
+        "x": 122,
+        "y": 137,
+        "width": 53,
+        "height": 16,
+        "text": "brown",
+        "confidence": 83
+      },
+      {
+        "x": 23,
+        "y": 190,
+        "width": 99,
+        "height": 13,
+        "text": "1234567880",
+        "confidence": 79
+      },
+      {
+        "x": 657,
+        "y": 17,
+        "width": 112,
+        "height": 42,
+        "text": "Model",
+        "confidence": 0.9999596427085246
+      },
+      {
+        "x": 417,
+        "y": 129,
+        "width": 44,
+        "height": 32,
+        "text": "dog",
+        "confidence": 0.9996210563327818
+      },
+      {
+        "x": 18,
+        "y": 76,
+        "width": 86,
+        "height": 32,
+        "text": "This is",
+        "confidence": 0.9918687127870778
+      },
+      {
+        "x": 13,
+        "y": 7,
+        "width": 633,
+        "height": 63,
+        "text": "Screen Reading Computer Vision",
+        "confidence": 0.9879731069064128
+      },
+      {
+        "x": 15,
+        "y": 225,
+        "width": 432,
+        "height": 38,
+        "text": "Testing different font sizes and styles",
+        "confidence": 0.964753287441315
+      },
+      {
+        "x": 113,
+        "y": 76,
+        "width": 378,
+        "height": 39,
+        "text": "a test image for OCR testing",
+        "confidence": 0.8664323580568165
+      },
+      {
+        "x": 18,
+        "y": 132,
+        "width": 401,
+        "height": 29,
+        "text": "The quick brown fox jumps over the lazy",
+        "confidence": 0.6849022054872707
+      }
+    ],
+    "primary_engine": "tesseract",
+    "secondary_engine": "easyocr",
+    "combined": true,
+    "processing_time": 1.010775089263916,
+    "image_shape": [
+      400,
+      800,
+      3
+    ],
+    "region": [
+      0,
+      0,
+      800,
+      600
+    ],
+    "timestamp": 1750397428.2930355
+  }
+}
