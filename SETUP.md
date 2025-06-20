@@ -4,16 +4,49 @@
 
 Before running the Screen Reader Computer Vision application, you need to install the following system dependencies:
 
-### Required System Packages
+### Linux/Ubuntu (Recommended)
 
 ```bash
 sudo apt-get update
 sudo apt-get install -y tesseract-ocr scrot xvfb
 ```
 
+### Windows
+
+#### Option 1: Using Chocolatey (Recommended)
+```powershell
+# Install Chocolatey first if not installed
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+# Install Tesseract OCR
+choco install tesseract
+```
+
+#### Option 2: Manual Installation
+1. **Tesseract OCR**: Download installer from [GitHub Releases](https://github.com/UB-Mannheim/tesseract/wiki)
+2. **Screen Capture**: Windows has built-in screenshot APIs (no additional software needed)
+3. **Virtual Display**: Not required on Windows
+
+#### Option 3: Using Windows Subsystem for Linux (WSL)
+```bash
+# Install WSL first, then use Linux commands
+wsl --install
+# Then follow Linux installation steps above
+```
+
+### macOS
+
+```bash
+# Using Homebrew
+brew install tesseract
+
+# Screen capture is built-in (screencapture command)
+```
+
+### Package Descriptions
 - **tesseract-ocr**: OCR engine for text recognition
-- **scrot**: Screen capture utility
-- **xvfb**: Virtual display support
+- **scrot**: Screen capture utility (Linux only)
+- **xvfb**: Virtual display support (Linux only)
 
 ## Python Dependencies
 
