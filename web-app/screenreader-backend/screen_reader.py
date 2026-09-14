@@ -56,14 +56,12 @@ class ScreenReader:
         temp_file = "/tmp/screenshot.png"
         
         try:
+            cmd = ["scrot", temp_file]
             if region:
-                x, y, width, height = region
-                # Use scrot for region capture
-                cmd = f"scrot -a {x},{y},{width},{height} {temp_file}"
-            else:
-                cmd = f"scrot {temp_file}"
-            
-            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+                x, y, width, height = (int(v) for v in region)
+                cmd = ["scrot", "-a", f"{x},{y},{width},{height}", temp_file]
+
+            result = subprocess.run(cmd, capture_output=True, text=True, check=False)
             
             if result.returncode != 0:
                 print("Warning: scrot failed, creating test image")
